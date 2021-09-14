@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head> 
+    <title>UMDCAS Client</title> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills justify-content-end">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="https://github.com/cobywinfield/UMDCAS">UMDCAS Github</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        {% if user_id != None %}
+                        <a class="nav-link" href="">{{ user_id }}</a>
+                        {% else %}
+                        <a class="nav-link" href="">Not Logged In </a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        {% if user_id != None %}
+                        <a class="nav-link" href="{% url 'logout' %}">logout</a>
+                        {% endif %}
+                    </li>
+                    
+                </ul>
+            </nav>
+         <h3 class="text-muted">University of Maryland Python CAS Cient Demo</h3>
+        </div> 
+ 
+        <div class="login">
+            <p><a class="btn btn-lg btn-success" href="{% url 'login' %}" role="button">Login with CAS</a></p>
+        </div>
+    </div>
+</body>
+ 
+</html>
