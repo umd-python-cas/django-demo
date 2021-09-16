@@ -9,6 +9,12 @@ Then, install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+Set up the database
+```bash
+./manage.py migrate
+```
+
 Finally, run the django webserver locally.
 ```bash
 ./manage.py runserver
