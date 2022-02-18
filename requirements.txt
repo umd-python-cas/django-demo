@@ -1,2 +1,2 @@
 umd_python_cas==1.0.0
-Django==3.2.7
+Django==3.2.12
